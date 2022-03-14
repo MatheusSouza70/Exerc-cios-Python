@@ -1,0 +1,40 @@
+nome = str(input("Informe o seu nome: "))
+idade = int(input("Informe sua idade: "))
+salario = float(input("Informe o seu salário: "))
+print("-"*40)
+print("M para masculino")
+print("F para feminino")
+print("-"*40)
+sexo = str(input("Informe o seu sexo: "))
+print("-"*40)
+print("solteiro")
+print("casado")
+print("viúvo")
+print("divorciado")
+print("junto")
+print("-"*40)
+estado = str(input("Informe o seu Estado Civil: "))
+
+while (len(nome) <= 3):
+    print("Seu nome deve ter mais do que 3 caracteres.")
+    nome = str(input("Informe o seu nome novamente: "))
+while idade < 0 or idade > 150:
+    print("Sua idade deve estar entre 0 e 150 anos.")
+    idade = int(input("Informe sua idade novamente: "))
+while salario < 0:
+    print("Seu salário deve ser igual a zero ou maior que zero. Informe-o novamente.")
+    salario = float(input("Informe o seu salário novamente: "))
+while sexo != "F" and sexo != "M":
+    print("Sexo inválido. Informe novamente!")
+    sexo = str(input("Informe o seu sexo novamente: "))
+while estado != "solteiro" and estado != "casado" and estado != "viuvo" and estado != "divorciado" and estado != "junto":
+    print("Estado cívil inválido. Tente novamente.")
+    estado = str(input("Informe o seu estado civil novamente: "))
+
+print("-"*40)
+print("Olá, {} " .format(nome))
+print("Você tem {} anos" .format(idade))
+print("Seu sálario é: R${} ".format(salario))
+print("Do sexo: {}" .format(sexo))
+print("Está atualmente: {}" .format(estado))
+print("-"*40)
